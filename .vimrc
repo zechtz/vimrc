@@ -13,7 +13,6 @@ filetyp plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set softtabstop=4
 set autoindent
 set showmatch
 set hlsearch
@@ -69,7 +68,8 @@ inoremap <s-tab> <c-n>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   RENAME CURRENT FILE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function RenameFile()
+function! RenameFile()
+    let old_name = expand('%')
     let new_name = input('New file name: ', expand('%'))
     if new_name != '' && new_name != old_name
         exec ':saveas ' . new_name
@@ -77,5 +77,5 @@ function RenameFile()
         redraw!
     endif
 endfunction
-map <leader>n :call RenameFile()<cr>
+map <c-n> :call RenameFile()<cr>
 
