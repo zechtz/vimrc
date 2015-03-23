@@ -10,7 +10,6 @@ set numberwidth=5
 set incsearch
 
 filetyp plugin indent on
-set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
@@ -23,7 +22,7 @@ set cmdheight=2
 
 syntax enable
 :set t_Co=256
-set background=light
+set background=dark
 colorscheme solarized
 
 set foldmethod=syntax
@@ -32,7 +31,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
-imap <leader> <c-y>,
+" map ctrl + c keys to autocomplete using emmet
+
+imap <c-c> <c-y>,
 vmap <c-w> <c-y>,
 
 "Insert a hash rocket with <c-l>
@@ -77,5 +78,7 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <c-n> :call RenameFile()<cr>
+map <c-r> :call RenameFile()<cr>
+
+
 
