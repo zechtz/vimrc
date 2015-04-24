@@ -42,6 +42,8 @@ imap <c-l> <space>=><space>
 set autoindent
 set smartindent
 
+let g:gitgutter_highlight_lines = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set a different background color on gutter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,6 +81,3 @@ function! RenameFile()
     endif
 endfunction
 map <c-r> :call RenameFile()<cr>
-
-
-
