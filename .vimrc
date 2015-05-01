@@ -39,6 +39,9 @@ vmap <c-w> <c-y>,
 "Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
+"Never have to lift your fingers just to escape in insert mode"
+imap jk <Esc>
+
 set autoindent
 set smartindent
 
