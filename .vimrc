@@ -24,6 +24,7 @@ syntax enable
 :set t_Co=256
 set background=dark
 colorscheme solarized
+"colorscheme monokai
 
 set foldmethod=syntax
 set foldmethod=indent
@@ -39,8 +40,12 @@ vmap <c-w> <c-y>,
 "Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
-"Never have to lift your fingers just to escape in insert mode"
-imap jk <Esc>
+"Fuzzy search files with ctrl.p plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+" check it here https://github.com/kien/ctrlp.vim
+
+"Never have to lift your fingers just to escape insert mode ':'"
+imap ll <Esc>:
 
 set autoindent
 set smartindent
